@@ -1,0 +1,370 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background: url('content/poster.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 0;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #020f24;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #555;
+}
+
+/* Assurez-vous que le document prend toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal qui prend toute la hauteur */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    z-index: 1;
+}
+
+/* Contenu principal */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 300px;
+    margin-left: 200px;
+    position: relative;
+}
+
+.name{
+    font-size: 2.5em ;
+    font-weight: bold;
+}
+
+.developpeur{
+    font-size: 5em ;
+    font-weight: bold;
+}
+
+.photo-oval {
+    position: relative;
+    width: 300px; 
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: none;
+}
+
+.photo-oval img {
+    width: 90%; /* Ajuste la taille de l'image à l'intérieur */
+    height: auto;
+    border-radius: 50%; /* Rend l'image ovale */
+    object-fit: cover; /* Garde les proportions de l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre à l'image */
+}
+
+
+.image-paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 300px 300px;
+}
+
+.image-paragraph p {
+    flex: 1;
+    font-size: 18px;
+    margin-right: 20px;
+    color: #fff;
+    line-height: 1.6;
+    z-index: 1;
+}
+
+.image-paragraph img {
+    flex: 0 0 300px; /* Taille fixe pour l'image */
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /*! width: 90%; */
+  /*! height: auto; */
+}
+
+/* Titre centré */
+.timeline-title {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 1;
+    margin-top: 200px;
+}
+
+/* Conteneur de la chronologie */
+.timeline {
+    display: flex;
+    flex-direction: column; /* Aligne les items verticalement */
+    align-items: center; /* Centre les items horizontalement */
+    gap: 40px; /* Espacement entre les étapes */
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Ligne verticale de la chronologie */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #0040ff;
+    transform: translateX(-50%);
+}
+
+/* Chaque élément de la chronologie */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 80%;
+}
+
+/* Boutons de la chronologie */
+.timeline-button {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border: 2px solid #0040ff; /* Bordure bleue */
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.timeline-button:hover {
+    transform: scale(1.1);
+}
+
+/* Description cachée par défaut avec transition */
+.timeline-description {
+    max-height: 0; /* Hauteur initiale */
+    overflow: hidden; /* Cache le contenu dépassant */
+    background-color: rgba(32, 44, 66, 0.9);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px; /* Ajoute un padding horizontal */
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Caché initialement */
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+/* Description visible */
+.timeline-description.active {
+    max-height: 200px; /* Hauteur maximale pour afficher le texte (ajustez selon votre contenu) */
+    padding: 15px 20px; /* Ajoute un padding vertical */
+    opacity: 1; /* Rend visible */
+}
+
+
+/* Transition fluide pour l'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contact-title {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 1;
+    margin-top: 400px;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+    background-color: transparent; /* Fond du cadre */
+    border: 2px solid #0040ff; /* Bordure bleue */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 30px; /* Espacement interne */
+    max-width: 400px; /* Largeur maximale */
+    margin: 50px auto; /* Centre le formulaire horizontalement */
+    color: #fff; /* Texte blanc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du cadre */
+    font-family: "Raleway", sans-serif;
+    z-index: 1;
+}
+
+.contact-form label {
+    display: block; /* Les étiquettes au-dessus des champs */
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff; /* Texte blanc */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Champs prennent toute la largeur */
+    padding: 10px;
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f4f4f4; /* Fond clair pour contraste */
+    color: #000; /* Texte noir */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #0040ff; /* Bordure bleue en focus */
+    outline: none;
+    background-color: #fff;
+}
+
+.contact-form button {
+    width: 100%; /* Bouton prend toute la largeur */
+    padding: 10px;
+    background-color: #0040ff; /* Fond bleu */
+    color: #fff; /* Texte blanc */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0030cc; /* Changement de couleur au survol */
+}
+
+.error {
+    width: 100%;
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+/* Conteneur des boutons circulaires */
+.circle-buttons-container {
+    position: fixed; /* Fixé en haut à droite de l'écran */
+    top: 200px; /* Position en dessous de la navbar */
+    right: 50px;
+    display: flex;
+    flex-direction: column; /* Empile les boutons verticalement */
+    gap: 15px; /* Espace entre les boutons */
+    z-index: 1000;
+}
+
+/* Boutons circulaires */
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #0040ff; /* Bordure bleue */
+    border-radius: 50%; /* Forme circulaire */
+    background-color: transparent; /* Fond transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    padding: 0;
+    z-index: 1000;
+}
+
+.circle-button img {
+    width: 60%; /* Image ajustée à la taille du bouton */
+    height: 60%;
+    border-radius: 50%; /* Arrondit l'image si nécessaire */
+    object-fit: cover;
+    z-index: 1000;
+}
+
+.circle-button:hover {
+    background-color: rgba(0, 64, 255, 0.1); /* Fond bleu clair au survol */
+    transform: scale(1.1); /* Légère mise en avant au survol */
+    z-index: 1000;
+}
+
+
+.projets-title {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 1;
+    margin-top: 200px;
+}

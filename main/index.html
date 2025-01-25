@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="video-background">
+                <video autoplay loop muted playsinline preload="auto" poster="content/poster.jpg">
+                    <source src="content/video.mp4" type="video/mp4">
+                    Votre Navigateur ne supporte pas les vidéos HTML5
+                </video>
+            </div>
+            <div class="overlay"></div>
+            <!-- Navbar -->
+            <div class="navbar">
+                <a href="#accueil">Accueil</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#mon-parcours">Mon parcours</a>
+                <a href="#mes-projets">Mes projets</a>
+                <a href="#contactez-moi">Contactez-moi</a>
+            </div>
+            <div class="circle-buttons-container">
+                <a href="https://www.linkedin.com/in/ryan-ramassamy/" target="_blank" class="circle-button">
+                    <img src="content/linkedin.png" alt="LinkedIn" title="LinkedIn">
+                </a>
+                <a href="https://github.com/rayourama" target="_blank" class="circle-button">
+                    <img src="content/github.png" alt="GitHub" title="GitHub">
+                </a>
+                <a href="mailto:ryan.ramassamy@orange.fr" class="circle-button">
+                    <img src="content/mail.png" alt="Email" title="Email">
+                </a>
+                <a href="tel:0676682900" class="circle-button">
+                    <img src="content/phone.png" alt="Téléphone" title="Téléphone">
+                </a>
+            </div>                       
+            <p id="accueil"></p>
+            <!-- Contenu principal -->
+            <div class="content">
+                <p class="name">Ramassamy Ryan</p>
+                <h1 class="developpeur">Développeur informatique</h1>
+                <p class="name">Bonjour à toutes et à tous et bienvenue sur mon Portfolio</p>
+            </div>
+            <p id="a-propos"></p>
+            <div class="image-paragraph">
+                <p class="description">
+                    Bienvenue sur mon portfolio ! Vous trouverez ici mes projets, mon parcours et bien plus encore.
+                    N'hésitez pas à me contacter pour toute question ou collaboration.
+                </p>
+                <div class="photo-oval">
+                    <img id="a-propos" src="content/ryan.png" alt="Photo de Ryan Ramassamy">
+                </div>
+            </div>
+            <p id="mon-parcours"></p>
+            <div class="timeline-section">
+                <h2 class="timeline-title">Mon Parcours</h2>
+                <div class="timeline">
+                    <!-- Étape 1 -->
+                    <div class="timeline-item">
+                        <button class="timeline-button" data-target="but1">BUT1</button>
+                        <p class="timeline-description hidden" id="but1">Description de BUT1. J'ai appris les bases de la programmation, le travail en équipe, et la gestion de projets.</p>
+                    </div>
+                    <!-- Étape 2 -->
+                    <div class="timeline-item">
+                        <button class="timeline-button" data-target="but2">BUT2</button>
+                        <p class="timeline-description hidden" id="but2">Description de BUT2. J'ai approfondi mes connaissances en développement web et mobile, et participé à des projets réels.</p>
+                    </div>
+                    <!-- Étape 3 -->
+                    <div class="timeline-item">
+                        <button class="timeline-button" data-target="but3">BUT3</button>
+                        <p class="timeline-description hidden" id="but3">Description de BUT3. J'ai consolidé mes compétences techniques et commencé à travailler sur des projets professionnels.</p>
+                    </div>
+                </div>
+            </div>
+            <p id="mes-projets"></p>
+            <h2 class="projets-title">Mes Projets</h2>
+            <h2 id="contactez-moi" class="contact-title">Contactez moi</h2>
+            <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xvgzovvo">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name">
+                <span class="error" id="name-error"></span>
+            
+                <label for="email">Mail :</label>
+                <input type="text" id="email" name="email">
+                <span class="error" id="email-error"></span>
+            
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <span class="error" id="message-error"></span>
+            
+                <button type="submit">Envoyer</button>
+            </form>
+                                 
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
