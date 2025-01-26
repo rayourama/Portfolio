@@ -38,7 +38,14 @@
                 <a href="tel:0676682900" class="circle-button">
                     <img src="content/phone.png" alt="Téléphone" title="Téléphone">
                 </a>
-            </div>                       
+            </div>
+            <!-- Bouton de téléchargement en bas à gauche avec texte -->
+             <div class="download-container">
+                <a href="content/CV Ryan RAMASSAMY.pdf" class="download-button" download="CV_Ryan_RAMASSAMY.pdf">
+                    <img src="content/CV.png" alt="Télécharger" title="Télécharger le PDF">
+                </a>
+                <span class="download-text">Mon CV</span>
+            </div>              
             <p id="accueil"></p>
             <!-- Contenu principal -->
             <div class="content">
@@ -49,8 +56,10 @@
             <p id="a-propos"></p>
             <div class="image-paragraph">
                 <p class="description">
-                    Bienvenue sur mon portfolio ! Vous trouverez ici mes projets, mon parcours et bien plus encore.
-                    N'hésitez pas à me contacter pour toute question ou collaboration.
+                    Je suis Ryan Ramassamy, étudiant en 3eme année de BUT Informatique, je souhaite viser toujours plus haut en alliant créativité, 
+                    excellence et détermination afin d’atteindre mes ambitions comme l’intégration d’un Master en cybersécurité ou en développement web. 
+                    Je suis passionné par le développement web et plus précisément par le front-end mais également la cybersécurité et l'intelligence artificielle. 
+                    Je souhaite tout le temps me développer et apprendre de nouvelles choses.
                 </p>
                 <div class="photo-oval">
                     <img id="a-propos" src="content/ryan.png" alt="Photo de Ryan Ramassamy">
@@ -63,22 +72,166 @@
                     <!-- Étape 1 -->
                     <div class="timeline-item">
                         <button class="timeline-button" data-target="but1">BUT1</button>
-                        <p class="timeline-description hidden" id="but1">Description de BUT1. J'ai appris les bases de la programmation, le travail en équipe, et la gestion de projets.</p>
+                        <p class="timeline-description hidden" id="but1">Lors de cette première année j'ai essentiellement 
+                            appris les bases de différents langages de programmations tels que Python, HTML, CSS ou encore 
+                            Java. J'ai également pu développer des compétences en termes de travail d'équipe, de leadership. 
+                            Cette première année m'aura notamment permis de comprendre ce que j'aimais faire, quelle partie de
+                             l'informatique m'intéressait le plus. J'ai également pu découvrir la vie d'un étudiant à la FAC 
+                             qui est quand même assez différente de celle d'un lycéen ou autre.</p>
                     </div>
                     <!-- Étape 2 -->
                     <div class="timeline-item">
                         <button class="timeline-button" data-target="but2">BUT2</button>
-                        <p class="timeline-description hidden" id="but2">Description de BUT2. J'ai approfondi mes connaissances en développement web et mobile, et participé à des projets réels.</p>
+                        <p class="timeline-description hidden" id="but2">La deuxième année, quant à elle, m'aura surtout 
+                            permis de devenir plus autonome, notamment grâce aux SAE (Situation d'Apprentisage et 
+                            D'Évaluation) mais j'ai également appris diverses notions techniques notamment en JavaScript, en 
+                            PHP ainsi qu'en PostgreSQL. Cette année m'aura permis de mûrir et de retenir plusieurs leçons 
+                            telles que l'importance de l'investissement dans le travail ou dans les études plus globalement.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <button class="timeline-button" data-target="stage">Stage</button>
+                        <p class="timeline-description hidden" id="stage">Le stage à signifié la découverte du monde 
+                            professionnel et l'intégration d'une entreprise. Pour ma part, j'ai effectué un stage chez 
+                            BNP Paribas en tant que développeur Full-Stack. Découvrir un nouvel environnement de travail 
+                            une nouvelle ambiance, de nouveaux collègues, tout cela était nouveau pour moi mais j'ai 
+                            rapidement su m'intégrer au sein de l'équipe notamment à l'aide de réunions quotidiennes qui 
+                            me permettaient d'être en contact fréquemment avec les autres membres de l'équipe ou encore 
+                            le fait de travailler en open space qui permet de faciliter la communication et la vie 
+                            d'entreprise.</p>
                     </div>
                     <!-- Étape 3 -->
                     <div class="timeline-item">
                         <button class="timeline-button" data-target="but3">BUT3</button>
-                        <p class="timeline-description hidden" id="but3">Description de BUT3. J'ai consolidé mes compétences techniques et commencé à travailler sur des projets professionnels.</p>
+                        <p class="timeline-description hidden" id="but3">Les expériences et projets des années passées 
+                            m'ont permis d'aborder cette troisième et dernière année sereinement, avec toutes les 
+                            méthodologies nécessaires pour réussir et toute la motivation nécessaire pour atteindre mes 
+                            objectifs d'intégrer un Master en cybersécurité ou bien en développement web. Évidemment ces
+                            deux années ainsi que le stage m'ont aidé à développer mes compétences qu'elles soient techniques 
+                            ou transverses et c'est ce qui me permet de m'améliorer encore aujourd'hui.</p>
                     </div>
                 </div>
             </div>
             <p id="mes-projets"></p>
-            <h2 class="projets-title">Mes Projets</h2>
+            <div class="projects-section">
+                <h2>Mes Projets</h2>
+                <p class="but">Le BUT Informatique propose ce que l'on appelle des SAE (Situation d'apprentisage et d'évaluation) qui 
+                    permettent aux étudiants de simuler une problématique, une situation que l'on retrouve dans le milieu 
+                    professionnel qui requiert la mobilisation de 6 compétences spécifiques. Ces 6 compétences sont alors 
+                    mises en avant dans les projets tels que les SAE. Voici quelques un des projets que j'ai réalisé.</p>
+                
+                <a class="lien" href="content/compétences.pdf" target="_blank">Retrouvez les 6 compétences en détails ici.</a>
+                <div class="projects-grid">
+                    <!-- Projet 1 -->
+                    <div class="project-card" data-target="modal1">
+                        <img src="content/projet1.png" alt="Implémentation d’un besoin client">
+                        <p>Implémentation d’un besoin client</p>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="project-card" data-target="modal2">
+                        <img src="content/projet2.png" alt="Snake">
+                        <p>Snake</p>
+                    </div>
+                    <!-- Projet 3 -->
+                    <div class="project-card" data-target="modal3">
+                        <img src="content/projet3.png" alt="Développement d’une application complexe">
+                        <p>Développement d’une application complexe</p>
+                    </div>
+                    <!-- Projet 4 -->
+                    <div class="project-card" data-target="modal4">
+                        <img src="content/projet4.png" alt="Développement avancé">
+                        <p>Développement avancé</p>
+                    </div>
+                    <!-- Projet 5 -->
+                    <div class="project-card" data-target="modal5">
+                        <img src="content/projet5.png" alt="Consulat de Guadeloupe">
+                        <p>Consulat de Guadeloupe</p>/
+                    </div>
+                    <!-- Projet 6 -->
+                    <div class="project-card" data-target="modal6">
+                        <img src="content/projet6.png" alt="Devine le nombre">
+                        <p>Devine le nombre</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fenêtres Modales -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/projet1.png" alt="Implémentation d’un besoin client">
+                    <h3>Implémentation d’un besoin client</h3>
+                    <p>Ce projet est une SAE réalisée dans le cadre de ma première année de BUT Informatique. Ce dernier 
+                        consiste en la simulation d'un réseau social. En binôme, et en utilisant Python et plus précisément 
+                        Jupyter Notebook, il nous a été demandé d'implémenter plusieurs fonctions en fonction de la demande 
+                        qui nous était demandé. Cette SAE m'a alors permis de travailler en equipe et de développer mes 
+                        compétences en programmation en Python.</p>
+                    <a href="https://github.com/rayourama/SAE-1.01-Implementation-d-un-besoin-client" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/projet2.png" alt="Snake">
+                    <h3>Snake</h3>
+                    <p>Ce projet est snake réalisé dans le cadre de la Ressource de Programmation Multimédia de ma 3eme 
+                        année de BUT Informatique. Le principal objectif de ce projet était de mettre en pratique les t
+                        echniques d'animations que nous avons appris en cours à l'aide de python. Cela m'a alors permis 
+                        d'élargir mes connaissances à propos de Python et des différentes librairies que l'on peut utiliser.</p>
+                    <a href="https://github.com/rayourama/Jeu-de-Snake" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/site3.png" alt="Développement d’une application complexe">
+                    <h3>Développement d’une application complexe</h3>
+                    <p>Ce projet est une SAE de groupe de 5 étudiants réalisée dans le cadre de ma deuxième année de 
+                        BUT Informatique. Cette SAE avait pour objectif de reprendre le projet d'une autre équipe, et 
+                        de faire le nécessaire pour optimiser l'application Web produite. Entre la coordination de groupe, 
+                        le travail d'équipe ainsi que la gestion de groupe, j'ai pu vivre une nouvelle expérience. 
+                        En utilisant des outils tels que HTML, CSS, PHP ou encore PostgreSQL, nous avons mis l'accent 
+                        sur l'accessibilité du site.</p>
+                    <a href="https://github.com/rayourama/SAE-4.01-Developpement-d-une-application-complexe" target="_blank">Voir le projet sur Github</a></br>
+                </br><a href="https://jupyter.univ-paris13.fr/~12101147/" target="_blank">Ou alors le site</a>
+                </div>
+            </div>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/site4.png" alt="Développement avancé">
+                    <h3>Développement avancé</h3>
+                    <p>Ce projet est une SAE de groupe de 5 étudiants realisee dans le cadre de ma troisième année 
+                        de BUT Informatique. Cette SAE est une application web utilisant HTML, CSS, JavaScript, 
+                        Python ainsi que MongoDB. Cette application a été développée et optimisée afin d'être la 
+                        plus efficace possible.</p>
+                    <a href="https://github.com/rayourama/SAE-5.01-Developpement-avance" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/site5.png" alt="Consulat de Guadeloupe">
+                    <h3>Consulat de Guadeloupe</h3>
+                    <p>Ce projet est un site Web développé dans le cadre de la Ressource de Qualité de Développement 
+                        de ma 3eme année de BUT Informatique. Ce site, codé en HTML, CSS, JavaScript et PHP et suivant 
+                        une architecture MVC, permet de simuler le consulat de la Guadeloupe, où il est possible 
+                        d'effectuer une demande de visa, de découvrir la culture guadeloupéenne. Ce projet avait pour
+                         objectif de nous apprendre à étudier la demande d'un client, d'apprendre à mener un projet à 
+                         bien pour qu'il soit qualitatif.</p>
+                    <a href="https://github.com/rayourama/R508-Qualite-de-Developpement" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="content/site6.png" alt="Devine le nombre">
+                    <h3>Devine le nombre</h3>
+                    <p>Ce projet est un projet personnel développé hors cadre universitaire. Il s'agit d'un jeu simple 
+                        développé en HTML, CSS et JavaScript où l'ordinateur choisit un nombre aléatoire, et vous devez 
+                        deviner le nombre mystère.</p>
+                    <a href="https://github.com/rayourama/Devine-le-nombre" target="_blank">Voir le projet</a>
+                </div>
+            </div>
             <h2 id="contactez-moi" class="contact-title">Contactez moi</h2>
             <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xvgzovvo">
                 <label for="name">Nom :</label>

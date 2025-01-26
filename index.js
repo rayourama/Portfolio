@@ -76,20 +76,32 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset(); // Vide les champs dès le chargement
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector(".menu-button");
-    const menuContent = document.querySelector(".menu-content");
 
-    // Affiche ou masque le menu au clic sur ☰
-    menuButton.addEventListener("click", () => {
-        menuContent.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+    const projectCards = document.querySelectorAll(".project-card");
+    const modals = document.querySelectorAll(".modal");
+    const closeButtons = document.querySelectorAll(".close");
+
+    // Ouvrir la modale associée
+    projectCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const targetId = card.getAttribute("data-target");
+            const modal = document.getElementById(targetId);
+            if (modal) modal.style.display = "flex";
+        });
     });
 
-    // Ferme le menu si l'utilisateur clique ailleurs
-    document.addEventListener("click", (event) => {
-        if (!menuContent.contains(event.target) && event.target !== menuButton) {
-            menuContent.classList.remove("active");
-        }
+    // Fermer la modale en cliquant sur le bouton de fermeture
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.closest(".modal").style.display = "none";
+        });
+    });
+
+    // Fermer la modale en cliquant en dehors du contenu
+    modals.forEach(modal => {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        });
     });
 });
-
