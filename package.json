@@ -1,13 +1,16 @@
 {
-  "name": "portfolio-v2",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://rayourama.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
