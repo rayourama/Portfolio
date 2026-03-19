@@ -2,6 +2,7 @@ import photoSnake from "../assets/applications/snake.png";
 import photoDevineNombre from "../assets/applications/devineNombre.png";
 import photoSudokuGo from "../assets/applications/sudoku.png";
 import photoModalDevineNombre from "../assets/applications/devineNombre_card.png";
+import PSM from "../assets/pending_projet.png";
 
 export interface Application {
   id: string;
@@ -36,5 +37,13 @@ export const APPLICATIONS: Application[] = [
     imageModal: photoSudokuGo,
     description: "Ce projet est un jeu de sudoku en Golang. L'ordinateur génère des grilles de Sudoku et permet à l'utilisateur de les résoudre à l'aide d'une interface graphique. Le Sudoku est un jeu où le but est de remplir un grille avec des chiffres allant de 1 à 9 en respectant certaines conditions.",
     link: "https://github.com/rayourama/Sudoku-GO",
+  },
+  {
+    id: "psm",
+    title: "Pro Soccer Manager",
+    imageCard: PSM,
+    imageModal: PSM,
+    description: "Ce projet est en cours de développement.",
+    link: "",
   },
 ];
