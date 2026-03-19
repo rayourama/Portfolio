@@ -12,7 +12,7 @@ import Applications from "./pages/Applications"
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div className="min-h-screen bg-gradient-to-b from-slate-100 via-slate-100 to-slate-200 text-slate-800">
         <Routes>
 
