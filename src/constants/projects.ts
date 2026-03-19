@@ -7,6 +7,7 @@ import consulatCard from "../assets/projets/consulat_card.png"
 import consulatModal from "../assets/projets/consulat.png"
 import podcast from "../assets/projets/podcast.png"
 import sae6 from "../assets/projets/sae6.01.jpg"
+import sae6Content from "../assets/SAE 6.01.pdf"
 
 
 export interface Project {
@@ -65,6 +66,6 @@ export const PROJECTS: Project[] = [
     imageCard: sae6,
     imageModal: sae6,
     description: "Ce projet est une SAE où nous étions chargé de réaliser un audit critique de deux projets informatiques développé par d’autres élèves. L’objectif est d’évaluer la qualité du projet, d’identifier ses points forts et ses axes d’amélioration, et de proposer des recommandations concrètes.",
-    link: "",
+    link: sae6Content,
   },
 ];
