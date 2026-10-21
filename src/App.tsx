@@ -26,7 +26,7 @@ function App() {
                   <Hero />
 
                   <section className="text-center text-lg text-slate-700 max-w-3xl mx-auto">
-                    Je suis à la recherche d’un stage d'une durée de 2 à 4 mois.
+                    Je suis à la recherche d’un stage d'une durée de 6 mois.
                     Je souhaite continuellement me développer et apprendre de nouvelles choses.
                     Je suis particulièrement intéressé par la data, l’ingénierie logicielle
                     et le développement web.
