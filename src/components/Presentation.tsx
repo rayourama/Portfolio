@@ -10,7 +10,7 @@ export default function Hero() {
       />
       <div className="space-y-4 text-slate-700 text-lg">
         <p>
-          Étudiant en première année de Master en ingénierie logicielle à
+          Étudiant en dernière année de Master en ingénierie logicielle à
           l’Université Paris-Saclay.
         </p>
         <p>
